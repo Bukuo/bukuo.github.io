@@ -3,15 +3,19 @@
 <head>
     <title>Bukuo's Links</title>
     <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="ressources/bern.ico">
     <style>
-        body {
+    body {
         font-family: Tahoma, sans-serif;
         color: #FFFFFF;
         background-color: #111111;
         align-items: center;
         justify-content: center;
+
+        opacity: 0;
+        transition: opacity .5s;
     }
-    
+
     .button {
         border: none;
         border-radius: 100%;
@@ -93,19 +97,24 @@
         font-size: 17px;
     }
 
-    .topnav a:hover {
-        background-color: #ddd;
-        color: black;
-    }
-
     .topnav a.active {
         background-color: #1e1c29;
+        color: white;
+    }
+
+    .topnav a.notice {
         color: white;
     }
 
     .topnav a.active2 {
         background-color: #252333;
         color: white;
+    }
+
+    .topnav a.active2:hover {
+        text-decoration: none;
+        color: #5c58a1;
+        cursor: pointer;
     }
 
     a:link {
@@ -163,21 +172,34 @@
     }
 
     </style>
+    <script>
+    window.transitionToPage = function(href) {
+    document.querySelector('body').style.opacity = 0
+    setTimeout(function() { 
+        window.location.href = href
+    }, 500)
+    }
+    
+    document.addEventListener('DOMContentLoaded', function(event) {
+        document.querySelector('body').style.opacity = 1
+    })
+    </script>
 </head>
 
 <body>
     <div class="topnav">
         <a class="active">Bukuo</a>
-        <a class="active2" href="index.html">Stuff</a>
-        <a class="active2" href="perso.html">Me</a>
+        <a class="notice">Click on them -></a>
+        <a class="active2" onclick="transitionToPage('index.html')">[Stuff]</a>
+        <a class="active2" onclick="transitionToPage('perso.html')">[About Me]</a>
     </div>
-    <div class="main animate-in">
+    <div class="main">
         <div class="text">
             <div class="title">Who am I?</div>
-            <p>Hey, I'm Bukuo. A french boy that will be soon an adult.<br>I mainly play video games, including things like:<br>VSRG, FPS, TPS, Sandbox and more...</p>
-            <p>Really shy but feels more comfortable once I know you.<br>Feel free to add me on Discord: InvisibleW#4331</p>
+            <p>Hey, I'm Bukuo. A french boy that will be soon an adult.<br>I mainly play video games, including things like:<br>Rhythm games, FPS, TPS, sandbox, and fighting games (still new).</p>
+            <p>A bit shy but feels more comfortable once I know you.<br>Feel free to add me on Discord: ut3na (InvisibleW#4331)</p>
         </div>
     </div>
-    <a href="mailto:bukuogame@gmail.com" class="bottom">Bukuo</a>
+    <a href="mailto:bukuogame@gmail.com" class="bottom">Bukuo [mail]</a>
 </body>
 </html>

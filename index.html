@@ -3,6 +3,7 @@
 <head>
     <title>Bukuo's Links</title>
     <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="ressources/bern.ico">
     <style>
         body {
         font-family: Tahoma, sans-serif;
@@ -10,8 +11,11 @@
         background-color: #111111;
         align-items: center;
         justify-content: center;
+
+        opacity: 0;
+        transition: opacity .5s;
     }
-    
+
     .button {
         border: none;
         border-radius: 100%;
@@ -38,12 +42,12 @@
     .button1:hover {
         background-color: #5c58a1;
         color: white;
-        transform: scale(1.1,1.1) rotate(2deg);
+        transform: scale(1.1,1.1) rotate(1.5deg);
     }
     
     .button1:active {
         transform: scale(0.95,0.95) rotate(2.4deg);
-        transition-duration: 0.1s;
+        transition-duration: 0.07s;
     }
     
     .bottom {
@@ -103,19 +107,35 @@
         font-size: 17px;
     }
 
-    .topnav a:hover {
-        background-color: #ddd;
-        color: black;
-    }
-
     .topnav a.active {
         background-color: #1e1c29;
+        color: white;
+    }
+
+    .topnav a.notice {
         color: white;
     }
 
     .topnav a.active2 {
         background-color: #252333;
         color: white;
+    }
+
+    .topnav a.active2:hover {
+        text-decoration: none;
+        color: #5c58a1;
+        cursor: pointer;
+    }
+
+    .title {
+        font-size: 30px;
+        text-align: center;
+        background-image: linear-gradient(to right,rgba(70, 66, 138, .2), rgba(101, 100, 117, .3));
+        border-radius: 10px;
+        margin-bottom: 10px;
+        padding: 5px;
+        width: 50%;
+        margin-left: 25%;
     }
 
     @keyframes title {
@@ -143,21 +163,56 @@
     }
 
     </style>
+    <script>
+        window.transitionToPage = function(href) {
+        document.querySelector('body').style.opacity = 0
+        setTimeout(function() { 
+            window.location.href = href
+        }, 500)
+        }
+    
+        document.addEventListener('DOMContentLoaded', function(event) {
+            document.querySelector('body').style.opacity = 1
+        })
+    </script>
 </head>
 
 <body>
     <div class="topnav">
         <a class="active">Bukuo</a>
-        <a class="active2" href="index.html">Stuff</a>
-        <a class="active2" href="perso.html">Me</a>
+        <a class="notice">Click on them -></a>
+        <a class="active2" onclick="transitionToPage('index.html')">[Stuff]</a>
+        <a class="active2" onclick="transitionToPage('perso.html')">[About Me]</a>
     </div>
-    <div class="main animate-in">
-        <button class="button button1" onclick="window.location.href='https://www.youtube.com/channel/UCDrbCrhbhukKE6h3kk6aFpw';">Youtube</button>
-        <button class="button button1" onclick="window.location.href='https://www.twitch.tv/bukuoo';">Twitch</button>
-        <button class="button button1" onclick="window.location.href='https://twitter.com/Bukuo__';">Twitter</button>
-        <button class="button button1" onclick="window.location.href='https://steamcommunity.com/id/Bukuo';">Steam</button>
-        <button class="button button1" onclick="window.location.href='https://osu.ppy.sh/users/13835799';">osu!</button>
+    <div class="main">
+        <div class="title">Socials</div>
+  
+        <form action="https://www.youtube.com/channel/UCDrbCrhbhukKE6h3kk6aFpw" method="get" target="_blank">
+            <button class="button button1" type="submit">Youtube</button>
+        </form>
+        <form action="https://www.twitch.tv/bukuoo" method="get" target="_blank">
+            <button class="button button1" type="submit">Twitch</button>
+        </form>
+        <form action="https://twitter.com/Bukuo__" method="get" target="_blank">
+            <button class="button button1" type="submit">Twitter</button>
+        </form>
+        <form action="https://www.instagram.com/toatrika/" method="get" target="_blank">
+            <button class="button button1" type="submit">Instagram</button>
+        </form>
+        <form action="https://myanimelist.net/profile/Bukuo" method="get" target="_blank">
+            <button class="button button1" type="submit">MyAnimeList</button>
+        </form>
+        &nbsp;
+
+        <div class="title">Games</div>
+
+        <form action="https://steamcommunity.com/id/Bukuo" method="get" target="_blank">
+            <button class="button button1" type="submit">Steam</button>
+        </form>
+        <form action="https://osu.ppy.sh/users/13835799" method="get" target="_blank">
+            <button class="button button1" type="submit">osu!</button>
+        </form>
     </div>
-    <a href="mailto:bukuogame@gmail.com" class="bottom">Bukuo</a>
+    <a href="mailto:bukuogame@gmail.com" class="bottom">Bukuo [mail]</a>
 </body>
 </html>
