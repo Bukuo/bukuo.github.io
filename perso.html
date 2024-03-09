@@ -8,57 +8,18 @@
     body {
         font-family: Tahoma, sans-serif;
         color: #FFFFFF;
-        background-color: #111111;
+        background-color: #131313;
         align-items: center;
         justify-content: center;
-    }
-
-    .button {
-        border: none;
-        border-radius: 100%;
-        color: white;
-        width: 100%;
-        height: 50px;
-        table-layout: fixed;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 20px;
-        margin: 6px 2px;
-        transition-duration: 0.3s;
-        cursor: pointer;
-    }
-    
-    .button1 {
-        background-color: white; 
-        color: black; 
-        border: 2px solid #111111;
-        border-radius: 20px;
-    }
-    
-    .button1:hover {
-        background-color: #5c58a1;
-        color: white;
-        transform: scale(1.1,1.1) rotate(2deg);
-    }
-    
-    .button1:active {
-        transform: scale(0.95,0.95) rotate(2.4deg);
-        transition-duration: 0.1s;
-    }
-    
-    .bottom {
-        position: fixed;
-        bottom: 0;
-        padding: 10px;
     }
     
     .main {
         width: 450px;
         background-image: linear-gradient(to right, rgba(101, 100, 117, .3), rgba(70, 66, 138, .2));
         padding: 4rem;
-        border-radius: 25px;
+        border-radius: 50px;
         position: absolute;
+        outline: 1px solid black;
         left: 50%;
         top: 50%;
         -webkit-transform: translate(-50%, -50%);
@@ -66,23 +27,16 @@
 
     }
     
-    h1 {
-        position: absolute;
-        top: 10%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -webkit-animation: title 5s;
-        animation-iteration-count: infinite;
-    }
-    
     .topnav {
         background-color: #252333;
+        outline: 1px solid black;
         overflow: hidden;
         border-radius: 0px;
         position: fixed;
         width: 100%;
         top:0;
-        margin:0px; 
+        margin:0px;
+        left: 0;
     }
 
     .topnav a {
@@ -106,6 +60,7 @@
     .topnav a.active2 {
         background-color: #252333;
         color: white;
+        padding: 20px 10px;
     }
 
     .topnav a.active2:hover {
@@ -114,60 +69,19 @@
         cursor: pointer;
     }
 
-    a:link {
-        text-decoration: none;
-        color: #FFFFFF
-    }
-      
-    a:visited {
-        text-decoration: none;
-        color: #FFFFFF
-    }
-      
-    a:hover {
-        text-decoration: none;
-        color: #5c58a1;
-    }
-      
-    a:active {
-        text-decoration: none;
-        color: #FFFFFF
-    }
-
-    @keyframes title {
-        0% {opacity: 1}
-        50% {opacity: 0.5;}
-        100% {opacity: 1;}
-    }
-
     .text {
         color: #FFFFFF;
         font-size: 15px;
+    }
+
+    .textam {
+        font-size: 17px;
     }
 
     .title {
         font-size: 40px;
         margin:20px; 
     }
-
-    .animate-in {
-        -webkit-animation: fadeIn .5s ease-in;
-        animation: fadeIn .5s ease-in;
-    }
-    .animate-out {
-        -webkit-transition: opacity .5s;
-        transition: opacity .5s;
-        opacity: 0;
-    }
-    @-webkit-keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
-
     </style>
 </head>
 
@@ -177,14 +91,15 @@
         <a class="notice">Click on them -></a>
         <a class="active2" href='index.html'>[Stuff]</a>
         <a class="active2" href='perso.html'>[About Me]</a>
+        <a class="active2" href="mailto:bukuogame@gmail.com">[Mail]</a>
     </div>
     <div class="main">
         <div class="text">
             <div class="title">Who am I?</div>
-            <p>Hey, I'm Bukuo. A french boy that will be soon an adult.<br>I mainly play video games, including things like:<br>Rhythm games, FPS, TPS, sandbox, and fighting games (still new).</p>
-            <p>A bit shy but feels more comfortable once I know you.<br>Feel free to add me on Discord: ut3na (InvisibleW#4331)</p>
+            <p class="textam">Hey, I'm Bukuo.<br>I'm still in school, so don't expect me to always be here.<br>I mainly play video games, including things like:<br>rhythm games, FPS, TPS, sandbox, and fighters.</p>
+            <p>A bit shy but feels more comfortable once I know you.<br>Feel free to add me on Discord:</p>
         </div>
+        <iframe style="transform: translate(15%, 0%);" title="Discord user embed" width="340" height=72 frameborder="0" sandbox="allow-scripts" src="https://widgets.vendicated.dev/user?id=404296022941106177&theme=dark&banner=false&full-banner=false&rounded-corners=true&discord-icon=true&badges=false&guess-nitro=true&"></iframe>
     </div>
-    <a href="mailto:bukuogame@gmail.com" class="bottom">Bukuo [mail]</a>
 </body>
 </html>

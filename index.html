@@ -8,7 +8,7 @@
         body {
         font-family: Tahoma, sans-serif;
         color: #FFFFFF;
-        background-color: #111111;
+        background-color: #131313;
         align-items: center;
         justify-content: center;
     }
@@ -47,52 +47,30 @@
         transition-duration: 0.07s;
     }
     
-    .bottom {
-        position: fixed;
-        bottom: 0;
-        padding: 10px;
-    }
-    
     .main {
         width: 450px;
         background-image: linear-gradient(to right, rgba(101, 100, 117, .3), rgba(70, 66, 138, .2));
         padding: 4rem;
-        border-radius: 25px;
+        border-radius: 50px;
         position: absolute;
+        outline: 1px solid black;
         left: 50%;
         top: 50%;
         -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
     }
     
-    a:link {
-        text-decoration: none;
-        color: #FFFFFF
-    }
-      
-    a:visited {
-        text-decoration: none;
-        color: #FFFFFF
-    }
-      
-    a:hover {
-        text-decoration: none;
-        color: #5c58a1;
-    }
-      
-    a:active {
-        text-decoration: none;
-        color: #FFFFFF
-    }
-    
     .topnav {
         background-color: #252333;
+        outline: 1px solid black;
         overflow: hidden;
         border-radius: 0px;
         position: fixed;
         width: 100%;
         top:0;
-        margin:0px; 
+        margin:0px;
+        left: 0;
+        Z-index: 999
     }
 
     .topnav a {
@@ -116,6 +94,7 @@
     .topnav a.active2 {
         background-color: #252333;
         color: white;
+        padding: 20px 10px;
     }
 
     .topnav a.active2:hover {
@@ -133,30 +112,7 @@
         padding: 5px;
         width: 50%;
         margin-left: 25%;
-    }
-
-    @keyframes title {
-        0% {opacity: 1}
-        50% {opacity: 0.5;}
-        100% {opacity: 1;}
-    }
-
-    .animate-in {
-        -webkit-animation: fadeIn .5s ease-in;
-        animation: fadeIn .5s ease-in;
-    }
-    .animate-out {
-        -webkit-transition: opacity .5s;
-        transition: opacity .5s;
-        opacity: 0;
-    }
-    @-webkit-keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
+        outline: 1px solid #131313;
     }
 
     </style>
@@ -168,6 +124,7 @@
         <a class="notice">Click on them -></a>
         <a class="active2" href='index.html'>[Stuff]</a>
         <a class="active2" href='perso.html'>[About Me]</a>
+        <a class="active2" href="mailto:bukuogame@gmail.com">[Mail]</a>
     </div>
     <div class="main">
         <div class="title">Socials</div>
@@ -198,6 +155,5 @@
             <button class="button button1" type="submit">osu!</button>
         </form>
     </div>
-    <a href="mailto:bukuogame@gmail.com" class="bottom">Bukuo [mail]</a>
 </body>
 </html>
